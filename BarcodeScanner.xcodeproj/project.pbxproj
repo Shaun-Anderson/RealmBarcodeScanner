@@ -282,7 +282,7 @@
 				DEVELOPMENT_TEAM = X9T272DK2T;
 				INFOPLIST_FILE = BarcadeScanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Ando.BarcadeScanner;
+				PRODUCT_BUNDLE_IDENTIFIER = Ando.BarcodeScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -296,7 +296,7 @@
 				DEVELOPMENT_TEAM = X9T272DK2T;
 				INFOPLIST_FILE = BarcadeScanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Ando.BarcadeScanner;
+				PRODUCT_BUNDLE_IDENTIFIER = Ando.BarcodeScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
