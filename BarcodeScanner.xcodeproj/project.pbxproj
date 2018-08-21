@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		28FD5276212B827D00C00746 /* BarcadeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarcadeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28FD5276212B827D00C00746 /* BarcodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarcodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28FD5279212B827D00C00746 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		28FD527A212B827D00C00746 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		28FD527C212B827D00C00746 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		28FD5277212B827D00C00746 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				28FD5276212B827D00C00746 /* BarcadeScanner.app */,
+				28FD5276212B827D00C00746 /* BarcodeScanner.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,9 +74,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		28FD5275212B827D00C00746 /* BarcadeScanner */ = {
+		28FD5275212B827D00C00746 /* BarcodeScanner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 28FD528C212B827D00C00746 /* Build configuration list for PBXNativeTarget "BarcadeScanner" */;
+			buildConfigurationList = 28FD528C212B827D00C00746 /* Build configuration list for PBXNativeTarget "BarcodeScanner" */;
 			buildPhases = (
 				28FD5272212B827D00C00746 /* Sources */,
 				28FD5273212B827D00C00746 /* Frameworks */,
@@ -86,9 +86,9 @@
 			);
 			dependencies = (
 			);
-			name = BarcadeScanner;
+			name = BarcodeScanner;
 			productName = BarcadeScanner;
-			productReference = 28FD5276212B827D00C00746 /* BarcadeScanner.app */;
+			productReference = 28FD5276212B827D00C00746 /* BarcodeScanner.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -97,7 +97,7 @@
 		28FD526E212B827D00C00746 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Shaun Anderson";
 				TargetAttributes = {
 					28FD5275212B827D00C00746 = {
@@ -106,7 +106,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 28FD5271212B827D00C00746 /* Build configuration list for PBXProject "BarcadeScanner" */;
+			buildConfigurationList = 28FD5271212B827D00C00746 /* Build configuration list for PBXProject "BarcodeScanner" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,7 +119,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				28FD5275212B827D00C00746 /* BarcadeScanner */,
+				28FD5275212B827D00C00746 /* BarcodeScanner */,
 			);
 		};
 /* End PBXProject section */
@@ -184,6 +184,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -191,6 +192,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -239,6 +241,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -246,6 +249,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -305,7 +309,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		28FD5271212B827D00C00746 /* Build configuration list for PBXProject "BarcadeScanner" */ = {
+		28FD5271212B827D00C00746 /* Build configuration list for PBXProject "BarcodeScanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				28FD528A212B827D00C00746 /* Debug */,
@@ -314,7 +318,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		28FD528C212B827D00C00746 /* Build configuration list for PBXNativeTarget "BarcadeScanner" */ = {
+		28FD528C212B827D00C00746 /* Build configuration list for PBXNativeTarget "BarcodeScanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				28FD528D212B827D00C00746 /* Debug */,
