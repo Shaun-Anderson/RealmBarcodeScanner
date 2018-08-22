@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:BarcadeScanner.xcodeproj">
+      location = "self:/Users/shaun/XcodeProjects/BarcodeScanner/BarcodeScanner.xcodeproj">
    </FileRef>
 </Workspace>
