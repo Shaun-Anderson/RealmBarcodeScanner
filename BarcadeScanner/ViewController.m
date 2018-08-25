@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import <ImageIO/CGImageProperties.h>
+#import <Realm/Realm.h>
+#import "DatabaseObject.h"
 
 @interface ViewController () <AVCaptureMetadataOutputObjectsDelegate>
 {
@@ -23,6 +25,7 @@
     UIView *_saveView;
     double brightness;
     double lumaThreshold;
+    NSLayoutConstraint *informationViewTopConstraint;
 }
 @end
 
@@ -31,6 +34,31 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    @autoreleasepool {
+        // all Realm usage here
+    }
+    NSFileManager *manager = [NSFileManager defaultManager];
+    RLMRealmConfiguration *config = [RLMRealmConfiguration defaultConfiguration];
+    NSArray<NSURL *> *realmFileURLs = @[
+                                        config.fileURL,
+                                        [config.fileURL URLByAppendingPathExtension:@"lock"],
+                                        [config.fileURL URLByAppendingPathExtension:@"note"],
+                                        [config.fileURL URLByAppendingPathExtension:@"management"]
+                                        ];
+    for (NSURL *URL in realmFileURLs) {
+        NSError *error = nil;
+        [manager removeItemAtURL:URL error:&error];
+        if (error) {
+            // handle error
+        }
+    }
+
+    
+    
+    
+    
+    RLMRealm *realm = [RLMRealm defaultRealm]; // Create realm pointing to default file
     
     InformationView.layer.cornerRadius = 20;
     InformationView.translatesAutoresizingMaskIntoConstraints = false;
@@ -55,10 +83,19 @@
     
     _session = [[AVCaptureSession alloc] init];
     _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    NSError *error;
+    
+    _input = [AVCaptureDeviceInput deviceInputWithDevice:_device error:&error];
+    if (_input) {
+        [_session addInput:_input];
+    } else {
+        NSLog(@"Error: %@", error);
+    }
     
     [_session beginConfiguration];
     [_session setSessionPreset:AVCaptureSessionPreset1920x1080];
     
+
 
     [self setupAVCapture];
     [self setupMetaCapture];
@@ -74,7 +111,6 @@
     [self.view bringSubviewToFront:InformationView];
     [self.view bringSubviewToFront:_highlightView];
     [self.view bringSubviewToFront:_label];
-    
     // Constraints
     
     NSLayoutConstraint *informationViewLeading = [NSLayoutConstraint
@@ -87,6 +123,11 @@
                                                   constraintWithItem:InformationView attribute:NSLayoutAttributeTrailing
                                                   relatedBy:NSLayoutRelationEqual toItem:self.view attribute:
                                                   NSLayoutAttributeTrailing multiplier:1.0 constant:50];
+    
+//    NSLayoutConstraint *informationViewTrailing= [NSLayoutConstraint
+//                                                  constraintWithItem:InformationView attribute:NSLayoutAttributeTrailing
+//                                                  relatedBy:NSLayoutRelationEqual toItem:self.view attribute:
+//                                                  NSLayoutAttributeTrailing multiplier:1.0 constant:50];
     
     [self.view addConstraints:@[informationViewLeading, informationViewTrailing]];
 
@@ -105,12 +146,7 @@
     // Set dispatch to be on the main thread so OpenGL can do things with the data
     [dataOutput setSampleBufferDelegate:self queue:dispatch_get_main_queue()];
     
-    _input = [AVCaptureDeviceInput deviceInputWithDevice:_device error:&error];
-    if (_input) {
-        [_session addInput:_input];
-    } else {
-        NSLog(@"Error: %@", error);
-    }
+
     
     _output = [[AVCaptureMetadataOutput alloc] init];
     [_output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
@@ -121,12 +157,7 @@
 
 - (void)setupAVCapture {
     
-    NSError *error;
-    AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:_device error:&error];
-    if(error)
-        assert(0);
-    
-    [_session addInput:input];
+    [_session addInput:_input];
     
     AVCaptureVideoDataOutput * dataOutput = [[AVCaptureVideoDataOutput alloc] init];
     [dataOutput setAlwaysDiscardsLateVideoFrames:YES]; // Probably want to set this to NO when recording
@@ -172,6 +203,21 @@
     }
     
     _highlightView.frame = highlightViewRect;
+}
+- (IBAction)showUI:(UIButton *)sender {
+    
+}
+
+- (void)addItemToRealm:(NSString*)itemName MetaData:(NSString*)itemMetaData{
+    DatabaseObject *newObject = [[DatabaseObject alloc] init];
+    newObject.name = itemName;
+    newObject.metaDataString = itemMetaData;
+    
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    [realm transactionWithBlock:^{
+        [realm addObject:newObject];
+    }];
+    
 }
 
 - (void)itemFound:(NSString *)itemString
