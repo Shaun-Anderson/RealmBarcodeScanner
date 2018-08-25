@@ -35,29 +35,6 @@
 {
     [super viewDidLoad];
     
-    @autoreleasepool {
-        // all Realm usage here
-    }
-    NSFileManager *manager = [NSFileManager defaultManager];
-    RLMRealmConfiguration *config = [RLMRealmConfiguration defaultConfiguration];
-    NSArray<NSURL *> *realmFileURLs = @[
-                                        config.fileURL,
-                                        [config.fileURL URLByAppendingPathExtension:@"lock"],
-                                        [config.fileURL URLByAppendingPathExtension:@"note"],
-                                        [config.fileURL URLByAppendingPathExtension:@"management"]
-                                        ];
-    for (NSURL *URL in realmFileURLs) {
-        NSError *error = nil;
-        [manager removeItemAtURL:URL error:&error];
-        if (error) {
-            // handle error
-        }
-    }
-
-    
-    
-    
-    
     RLMRealm *realm = [RLMRealm defaultRealm]; // Create realm pointing to default file
     
     InformationView.layer.cornerRadius = 20;

@@ -47,6 +47,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2851F682213174B300F4C448 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2851F67E213165BB00F4C448 /* DatabaseObject.h */,
+				2851F67C2131432500F4C448 /* DatabaseObject.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2851F683213174C500F4C448 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				28FD527C212B827D00C00746 /* ViewController.h */,
+				28FD527D212B827D00C00746 /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2851F684213174DD00F4C448 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				28FD527F212B827D00C00746 /* Main.storyboard */,
+				28FD5284212B827D00C00746 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		28FD526D212B827D00C00746 = {
 			isa = PBXGroup;
 			children = (
@@ -68,17 +95,14 @@
 		28FD5278212B827D00C00746 /* RealmBarcodeScanner */ = {
 			isa = PBXGroup;
 			children = (
+				2851F684213174DD00F4C448 /* View */,
+				2851F683213174C500F4C448 /* Controller */,
+				2851F682213174B300F4C448 /* Model */,
 				28FD5279212B827D00C00746 /* AppDelegate.h */,
 				28FD527A212B827D00C00746 /* AppDelegate.m */,
-				28FD527C212B827D00C00746 /* ViewController.h */,
-				28FD527D212B827D00C00746 /* ViewController.m */,
-				28FD527F212B827D00C00746 /* Main.storyboard */,
 				28FD5282212B827D00C00746 /* Assets.xcassets */,
-				28FD5284212B827D00C00746 /* LaunchScreen.storyboard */,
 				28FD5287212B827D00C00746 /* Info.plist */,
 				28FD5288212B827D00C00746 /* main.m */,
-				2851F67C2131432500F4C448 /* DatabaseObject.m */,
-				2851F67E213165BB00F4C448 /* DatabaseObject.h */,
 			);
 			path = RealmBarcodeScanner;
 			sourceTree = "<group>";
