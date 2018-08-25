@@ -199,6 +199,12 @@
 
 - (void)itemFound:(NSString *)itemString
 {
+    // If object already exists then show alert
+    if ([DatabaseObject objectsWhere:@"color = 'tan' AND name BEGINSWITH 'B'"] == nil) {
+        NSLog(@"Object already exists");
+        return;
+    }
+    
     UIAlertController* foundAlert = [UIAlertController alertControllerWithTitle:@"Unknown object found" message:@"" preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* addAction = [UIAlertAction actionWithTitle:@"Add to database" style:UIAlertActionStyleDefault
