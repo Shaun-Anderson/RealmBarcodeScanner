@@ -20,7 +20,7 @@
 /* Begin PBXFileReference section */
 		2851F67C2131432500F4C448 /* DatabaseObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatabaseObject.m; sourceTree = "<group>"; };
 		2851F67E213165BB00F4C448 /* DatabaseObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatabaseObject.h; sourceTree = "<group>"; };
-		28FD5276212B827D00C00746 /* BarcodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarcodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28FD5276212B827D00C00746 /* RealmBarcodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmBarcodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28FD5279212B827D00C00746 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		28FD527A212B827D00C00746 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		28FD527C212B827D00C00746 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		28FD526D212B827D00C00746 = {
 			isa = PBXGroup;
 			children = (
-				28FD5278212B827D00C00746 /* BarcadeScanner */,
+				28FD5278212B827D00C00746 /* RealmBarcodeScanner */,
 				28FD5277212B827D00C00746 /* Products */,
 				C7DC5AFDD6F9FCEE2D46583A /* Pods */,
 				FD9A52B09FD755DDCAA50BED /* Frameworks */,
@@ -60,12 +60,12 @@
 		28FD5277212B827D00C00746 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				28FD5276212B827D00C00746 /* BarcodeScanner.app */,
+				28FD5276212B827D00C00746 /* RealmBarcodeScanner.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		28FD5278212B827D00C00746 /* BarcadeScanner */ = {
+		28FD5278212B827D00C00746 /* RealmBarcodeScanner */ = {
 			isa = PBXGroup;
 			children = (
 				28FD5279212B827D00C00746 /* AppDelegate.h */,
@@ -80,7 +80,7 @@
 				2851F67C2131432500F4C448 /* DatabaseObject.m */,
 				2851F67E213165BB00F4C448 /* DatabaseObject.h */,
 			);
-			path = BarcadeScanner;
+			path = RealmBarcodeScanner;
 			sourceTree = "<group>";
 		};
 		C7DC5AFDD6F9FCEE2D46583A /* Pods */ = {
@@ -103,9 +103,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		28FD5275212B827D00C00746 /* BarcodeScanner */ = {
+		28FD5275212B827D00C00746 /* RealmBarcodeScanner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 28FD528C212B827D00C00746 /* Build configuration list for PBXNativeTarget "BarcodeScanner" */;
+			buildConfigurationList = 28FD528C212B827D00C00746 /* Build configuration list for PBXNativeTarget "RealmBarcodeScanner" */;
 			buildPhases = (
 				50715204689959F07484202C /* [CP] Check Pods Manifest.lock */,
 				28FD5272212B827D00C00746 /* Sources */,
@@ -116,9 +116,9 @@
 			);
 			dependencies = (
 			);
-			name = BarcodeScanner;
+			name = RealmBarcodeScanner;
 			productName = BarcadeScanner;
-			productReference = 28FD5276212B827D00C00746 /* BarcodeScanner.app */;
+			productReference = 28FD5276212B827D00C00746 /* RealmBarcodeScanner.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -136,7 +136,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 28FD5271212B827D00C00746 /* Build configuration list for PBXProject "BarcodeScanner" */;
+			buildConfigurationList = 28FD5271212B827D00C00746 /* Build configuration list for PBXProject "RealmBarcodeScanner" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -149,7 +149,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				28FD5275212B827D00C00746 /* BarcodeScanner */,
+				28FD5275212B827D00C00746 /* RealmBarcodeScanner */,
 			);
 		};
 /* End PBXProject section */
@@ -337,7 +337,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X9T272DK2T;
-				INFOPLIST_FILE = BarcadeScanner/Info.plist;
+				INFOPLIST_FILE = RealmBarcodeScanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ando.BarcodeScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,7 +352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X9T272DK2T;
-				INFOPLIST_FILE = BarcadeScanner/Info.plist;
+				INFOPLIST_FILE = RealmBarcodeScanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ando.BarcodeScanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -363,7 +363,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		28FD5271212B827D00C00746 /* Build configuration list for PBXProject "BarcodeScanner" */ = {
+		28FD5271212B827D00C00746 /* Build configuration list for PBXProject "RealmBarcodeScanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				28FD528A212B827D00C00746 /* Debug */,
@@ -372,7 +372,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		28FD528C212B827D00C00746 /* Build configuration list for PBXNativeTarget "BarcodeScanner" */ = {
+		28FD528C212B827D00C00746 /* Build configuration list for PBXNativeTarget "RealmBarcodeScanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				28FD528D212B827D00C00746 /* Debug */,
