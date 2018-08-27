@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UITextField+PaddedTextField.h"
 
 @interface InputTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet PaddedTextField *inputTextField;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end
