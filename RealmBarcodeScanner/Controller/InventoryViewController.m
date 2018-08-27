@@ -7,6 +7,8 @@
 //
 
 #import "InventoryViewController.h"
+#import <Realm/Realm.h>
+#import "DatabaseObject.h"
 
 @interface InventoryViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -16,16 +18,20 @@
 @implementation InventoryViewController
 
 NSArray *tableData;
+RLMResults<DatabaseObject *> *objects;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    tableData = [NSArray arrayWithObjects:@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini", nil];
     
-    NSLog(@"%@", tableData);
+    RLMRealm *realm = [RLMRealm defaultRealm]; // Create realm pointing to default file
+    objects = [DatabaseObject allObjects];
+    NSLog(@"%lu", (unsigned long)objects.count);
 
     // Do any additional setup after loading the view.
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,12 +51,12 @@ NSArray *tableData;
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
+    cell.textLabel.text = [objects objectAtIndex:indexPath.row].name;
     return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return tableData.count;
+    return objects.count;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
