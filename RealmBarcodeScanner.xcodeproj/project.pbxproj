@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2851F67D2131432500F4C448 /* DatabaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2851F67C2131432500F4C448 /* DatabaseObject.m */; };
+		286D8BD82133A46F005D3617 /* InputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 286D8BD72133A46F005D3617 /* InputTableViewCell.m */; };
 		28B5FDEF21328ADB00DA00E4 /* UITextField+PaddedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B5FDEE21328ADB00DA00E4 /* UITextField+PaddedTextField.m */; };
 		28B5FDF32132C18300DA00E4 /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B5FDF22132C18300DA00E4 /* CreateViewController.m */; };
 		28B5FDF62132C1C600DA00E4 /* InventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B5FDF52132C1C600DA00E4 /* InventoryViewController.m */; };
@@ -23,6 +24,8 @@
 /* Begin PBXFileReference section */
 		2851F67C2131432500F4C448 /* DatabaseObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatabaseObject.m; sourceTree = "<group>"; };
 		2851F67E213165BB00F4C448 /* DatabaseObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatabaseObject.h; sourceTree = "<group>"; };
+		286D8BD62133A46F005D3617 /* InputTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputTableViewCell.h; sourceTree = "<group>"; };
+		286D8BD72133A46F005D3617 /* InputTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputTableViewCell.m; sourceTree = "<group>"; };
 		28B5FDED21328ADB00DA00E4 /* UITextField+PaddedTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+PaddedTextField.h"; sourceTree = "<group>"; };
 		28B5FDEE21328ADB00DA00E4 /* UITextField+PaddedTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PaddedTextField.m"; sourceTree = "<group>"; };
 		28B5FDF12132C18300DA00E4 /* CreateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateViewController.h; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 				28FD5284212B827D00C00746 /* LaunchScreen.storyboard */,
 				28B5FDED21328ADB00DA00E4 /* UITextField+PaddedTextField.h */,
 				28B5FDEE21328ADB00DA00E4 /* UITextField+PaddedTextField.m */,
+				286D8BD62133A46F005D3617 /* InputTableViewCell.h */,
+				286D8BD72133A46F005D3617 /* InputTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 			files = (
 				28B5FDEF21328ADB00DA00E4 /* UITextField+PaddedTextField.m in Sources */,
 				28FD527E212B827D00C00746 /* ViewController.m in Sources */,
+				286D8BD82133A46F005D3617 /* InputTableViewCell.m in Sources */,
 				28B5FDF32132C18300DA00E4 /* CreateViewController.m in Sources */,
 				28FD5289212B827D00C00746 /* main.m in Sources */,
 				28FD527B212B827D00C00746 /* AppDelegate.m in Sources */,
