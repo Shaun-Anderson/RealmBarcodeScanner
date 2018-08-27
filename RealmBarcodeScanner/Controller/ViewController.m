@@ -13,7 +13,7 @@
 
 @interface ViewController () <AVCaptureMetadataOutputObjectsDelegate>
 {
-    __weak IBOutlet UIView *InformationView;
+    //__weak IBOutlet UIView *InformationView;
     AVCaptureSession *_session;
     AVCaptureDevice *_device;
     AVCaptureDeviceInput *_input;
@@ -22,10 +22,11 @@
     
     UIView *_highlightView;
     UILabel *_label;
+    UILabel *_brightnessLevel;
     UIView *_saveView;
     double brightness;
     double lumaThreshold;
-    NSLayoutConstraint *informationViewTopConstraint;
+    //NSLayoutConstraint *informationViewTopConstraint;
 }
 @end
 
@@ -35,10 +36,7 @@
 {
     [super viewDidLoad];
     
-    RLMRealm *realm = [RLMRealm defaultRealm]; // Create realm pointing to default file
-    
-    InformationView.layer.cornerRadius = 20;
-    InformationView.translatesAutoresizingMaskIntoConstraints = false;
+    // Create UI
     
     _highlightView = [[UIView alloc] init];
     _highlightView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleBottomMargin;
@@ -47,16 +45,29 @@
     _highlightView.layer.cornerRadius = 30;
     [self.view addSubview:_highlightView];
     
-    _label = [[UILabel alloc] init];
-    _label.frame = CGRectMake(0, self.view.bounds.size.height - 40, self.view.bounds.size.width, 40);
-    _label.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
-    _label.backgroundColor = [UIColor colorWithWhite:0.15 alpha:0.65];
-    _label.textColor = [UIColor whiteColor];
-    _label.textAlignment = NSTextAlignmentCenter;
-    _label.text = @"(none)";
-    [self.view addSubview:_label];
+    UIButton *button = [[UIButton alloc] init];
+    button.frame = CGRectMake(0, 50, self.view.bounds.size.width, 40);
+    button.backgroundColor = UIColor.whiteColor;
+    [button setTitle:@"OPEN CREATE" forState:normal];
+    [button setTitleColor:UIColor.blackColor forState:normal];
+    [button addTarget:self action:@selector(moveToCreate) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:button];
     
-    // Set new things
+    [self setUpBarcodeReader];
+
+    [self.view bringSubviewToFront:_highlightView];
+    [self.view bringSubviewToFront:_label];
+
+}
+
+-(void)moveToCreate {
+    NSLog(@"MOVEDD");
+    [self performSegueWithIdentifier:@"moveToCreate" sender:self];
+}
+
+// MARK: - Setup
+
+- (void)setUpBarcodeReader {
     
     _session = [[AVCaptureSession alloc] init];
     _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
@@ -72,8 +83,8 @@
     [_session beginConfiguration];
     [_session setSessionPreset:AVCaptureSessionPreset1920x1080];
     
-
-
+    
+    
     [self setupAVCapture];
     [self setupMetaCapture];
     
@@ -85,33 +96,10 @@
     [_session startRunning];
     
     [self.view.layer addSublayer:_prevLayer];
-    [self.view bringSubviewToFront:InformationView];
-    [self.view bringSubviewToFront:_highlightView];
-    [self.view bringSubviewToFront:_label];
-    // Constraints
     
-    NSLayoutConstraint *informationViewLeading = [NSLayoutConstraint
-                                                  constraintWithItem:InformationView attribute:NSLayoutAttributeLeading
-                                                  relatedBy:NSLayoutRelationEqual toItem:self.view attribute:
-                                                  NSLayoutAttributeLeading multiplier:1.0 constant:50];
-    
-    
-    NSLayoutConstraint *informationViewTrailing= [NSLayoutConstraint
-                                                  constraintWithItem:InformationView attribute:NSLayoutAttributeTrailing
-                                                  relatedBy:NSLayoutRelationEqual toItem:self.view attribute:
-                                                  NSLayoutAttributeTrailing multiplier:1.0 constant:50];
-    
-//    NSLayoutConstraint *informationViewTrailing= [NSLayoutConstraint
-//                                                  constraintWithItem:InformationView attribute:NSLayoutAttributeTrailing
-//                                                  relatedBy:NSLayoutRelationEqual toItem:self.view attribute:
-//                                                  NSLayoutAttributeTrailing multiplier:1.0 constant:50];
-    
-    [self.view addConstraints:@[informationViewLeading, informationViewTrailing]];
-
 }
 
 - (void)setupMetaCapture {
-    NSError *error = nil;
     //-- Create the output for the capture session.
     AVCaptureVideoDataOutput * dataOutput = [[AVCaptureVideoDataOutput alloc] init];
     [dataOutput setAlwaysDiscardsLateVideoFrames:YES]; // Probably want to set this to NO when recording
@@ -134,8 +122,6 @@
 
 - (void)setupAVCapture {
     
-    [_session addInput:_input];
-    
     AVCaptureVideoDataOutput * dataOutput = [[AVCaptureVideoDataOutput alloc] init];
     [dataOutput setAlwaysDiscardsLateVideoFrames:YES]; // Probably want to set this to NO when recording
     
@@ -147,6 +133,40 @@
     [_session addOutput:dataOutput];
 
 }
+
+- (void)itemFound:(NSString *)itemString
+{
+    // If object already exists then show alert
+    if ([DatabaseObject objectsWhere:@"metaDataString = %@", itemString].count != 0) {
+        NSLog(@"Object already exists");
+        // TODO: Create alert for existing.
+        return;
+    }
+    
+    UIAlertController* foundAlert = [UIAlertController alertControllerWithTitle:@"Unknown object found" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* addAction = [UIAlertAction actionWithTitle:@"Add to database" style:UIAlertActionStyleDefault
+                                                           handler:^(UIAlertAction * action) {
+                                                               [self moveToCreate];
+                                                           }];
+    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel
+                                                         handler:^(UIAlertAction * action) {
+                                                             self->_highlightView.frame = CGRectZero;
+                                                             [_session startRunning];
+                                                         }];
+    
+    [foundAlert addAction:addAction];
+    [foundAlert addAction:cancelAction];
+    [foundAlert setModalPresentationStyle:UIModalPresentationPopover];
+    
+    UIPopoverPresentationController *popPresenter = [foundAlert popoverPresentationController];
+    popPresenter.sourceView = self.view;
+    popPresenter.sourceRect = CGRectMake(0,0,1.0,1.0);
+    [self presentViewController:foundAlert animated:YES completion:nil];
+    
+}
+
+// MARK: - Output
 
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
@@ -180,53 +200,6 @@
     }
     
     _highlightView.frame = highlightViewRect;
-}
-- (IBAction)showUI:(UIButton *)sender {
-    
-}
-
-- (void)addItemToRealm:(NSString*)itemName MetaData:(NSString*)itemMetaData{
-    DatabaseObject *newObject = [[DatabaseObject alloc] init];
-    newObject.name = itemName;
-    newObject.metaDataString = itemMetaData;
-    
-    RLMRealm *realm = [RLMRealm defaultRealm];
-    [realm transactionWithBlock:^{
-        [realm addObject:newObject];
-    }];
-    
-}
-
-- (void)itemFound:(NSString *)itemString
-{
-    // If object already exists then show alert
-    if ([DatabaseObject objectsWhere:@"color = 'tan' AND name BEGINSWITH 'B'"] == nil) {
-        NSLog(@"Object already exists");
-        return;
-    }
-    
-    UIAlertController* foundAlert = [UIAlertController alertControllerWithTitle:@"Unknown object found" message:@"" preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction* addAction = [UIAlertAction actionWithTitle:@"Add to database" style:UIAlertActionStyleDefault
-                                                           handler:^(UIAlertAction * action) {
-                                                               //Code to unfollow
-                                                           }];
-    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel
-                                                         handler:^(UIAlertAction * action) {
-                                                             _highlightView.frame = CGRectZero;
-                                                             [_session startRunning];
-
-                                                         }];
-    
-    [foundAlert addAction:addAction];
-    [foundAlert addAction:cancelAction];
-    [foundAlert setModalPresentationStyle:UIModalPresentationPopover];
-    
-    UIPopoverPresentationController *popPresenter = [foundAlert popoverPresentationController];
-    popPresenter.sourceView = self.view;
-    popPresenter.sourceRect = CGRectMake(0,0,1.0,1.0);
-    [self presentViewController:foundAlert animated:YES completion:nil];
-    
 }
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput
