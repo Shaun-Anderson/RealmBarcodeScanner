@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2851F67D2131432500F4C448 /* DatabaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2851F67C2131432500F4C448 /* DatabaseObject.m */; };
+		28B5FDEF21328ADB00DA00E4 /* UITextField+PaddedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B5FDEE21328ADB00DA00E4 /* UITextField+PaddedTextField.m */; };
+		28B5FDF32132C18300DA00E4 /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B5FDF22132C18300DA00E4 /* CreateViewController.m */; };
+		28B5FDF62132C1C600DA00E4 /* InventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B5FDF52132C1C600DA00E4 /* InventoryViewController.m */; };
 		28FD527B212B827D00C00746 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FD527A212B827D00C00746 /* AppDelegate.m */; };
 		28FD527E212B827D00C00746 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FD527D212B827D00C00746 /* ViewController.m */; };
 		28FD5281212B827D00C00746 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28FD527F212B827D00C00746 /* Main.storyboard */; };
@@ -20,6 +23,12 @@
 /* Begin PBXFileReference section */
 		2851F67C2131432500F4C448 /* DatabaseObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatabaseObject.m; sourceTree = "<group>"; };
 		2851F67E213165BB00F4C448 /* DatabaseObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatabaseObject.h; sourceTree = "<group>"; };
+		28B5FDED21328ADB00DA00E4 /* UITextField+PaddedTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+PaddedTextField.h"; sourceTree = "<group>"; };
+		28B5FDEE21328ADB00DA00E4 /* UITextField+PaddedTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PaddedTextField.m"; sourceTree = "<group>"; };
+		28B5FDF12132C18300DA00E4 /* CreateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateViewController.h; sourceTree = "<group>"; };
+		28B5FDF22132C18300DA00E4 /* CreateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateViewController.m; sourceTree = "<group>"; };
+		28B5FDF42132C1C600DA00E4 /* InventoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InventoryViewController.h; sourceTree = "<group>"; };
+		28B5FDF52132C1C600DA00E4 /* InventoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InventoryViewController.m; sourceTree = "<group>"; };
 		28FD5276212B827D00C00746 /* RealmBarcodeScanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmBarcodeScanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28FD5279212B827D00C00746 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		28FD527A212B827D00C00746 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,6 +70,10 @@
 			children = (
 				28FD527C212B827D00C00746 /* ViewController.h */,
 				28FD527D212B827D00C00746 /* ViewController.m */,
+				28B5FDF12132C18300DA00E4 /* CreateViewController.h */,
+				28B5FDF22132C18300DA00E4 /* CreateViewController.m */,
+				28B5FDF42132C1C600DA00E4 /* InventoryViewController.h */,
+				28B5FDF52132C1C600DA00E4 /* InventoryViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -70,6 +83,8 @@
 			children = (
 				28FD527F212B827D00C00746 /* Main.storyboard */,
 				28FD5284212B827D00C00746 /* LaunchScreen.storyboard */,
+				28B5FDED21328ADB00DA00E4 /* UITextField+PaddedTextField.h */,
+				28B5FDEE21328ADB00DA00E4 /* UITextField+PaddedTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,10 +232,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28B5FDEF21328ADB00DA00E4 /* UITextField+PaddedTextField.m in Sources */,
 				28FD527E212B827D00C00746 /* ViewController.m in Sources */,
+				28B5FDF32132C18300DA00E4 /* CreateViewController.m in Sources */,
 				28FD5289212B827D00C00746 /* main.m in Sources */,
 				28FD527B212B827D00C00746 /* AppDelegate.m in Sources */,
 				2851F67D2131432500F4C448 /* DatabaseObject.m in Sources */,
+				28B5FDF62132C1C600DA00E4 /* InventoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
