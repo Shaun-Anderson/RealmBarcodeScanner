@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Inventory-->
+        <!--inventory-->
         <scene sceneID="Iwf-WX-B6j">
             <objects>
                 <viewController id="A0L-gy-eIv" customClass="InventoryViewController" sceneMemberID="viewController">
@@ -63,8 +63,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5Cf-jL-Gm3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Inventory" id="vTg-jY-Nob">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-17"/>
+                    <tabBarItem key="tabBarItem" title="inventory" id="vTg-jY-Nob">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="bEh-sZ-Gk4" id="pEf-cH-JGJ"/>
@@ -91,7 +91,7 @@
             </objects>
             <point key="canvasLocation" x="1301.5999999999999" y="328.07881773399015"/>
         </scene>
-        <!--Scanner-->
+        <!--hii-->
         <scene sceneID="tio-Pf-EbO">
             <objects>
                 <viewController id="6ED-q0-fc1" customClass="ViewController" sceneMemberID="viewController">
@@ -100,7 +100,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Low Brightness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOv-ti-dHx">
-                                <rect key="frame" x="0.0" y="625" width="375" height="35"/>
+                                <rect key="frame" x="106" y="625" width="269" height="35"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.25" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -111,10 +111,7 @@
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="rA1-na-pMd"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Scanner" image="UI-Icons_0000s_0117_new-camera" id="xhv-ck-F48">
-                        <color key="badgeColor" name="controlDarkShadowColor" catalog="System" colorSpace="catalog"/>
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-5"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="hii" image="icons8-camera-24" id="xhv-ck-F48"/>
                     <connections>
                         <segue destination="Mba-Pq-2za" kind="show" identifier="moveToCreate" id="o8T-jf-Om0"/>
                     </connections>
@@ -165,7 +162,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="wad" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fEP-QS-NEO" customClass="PaddedTextField">
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fEP-QS-NEO" customClass="PaddedTextField">
                                                     <rect key="frame" x="80" y="0.0" width="295" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -187,8 +184,8 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHB-SY-cC2">
-                                                    <rect key="frame" x="15" y="11.666666666666657" width="45" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <rect key="frame" x="15" y="12" width="345" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -198,6 +195,59 @@
                                         <connections>
                                             <outlet property="inputTextField" destination="fEP-QS-NEO" id="phJ-zn-dFz"/>
                                             <outlet property="titleLabel" destination="SHB-SY-cC2" id="gjz-Dh-W21"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="formStepperCell" id="aJc-Wv-8lt" customClass="FormStepperTableViewCell">
+                                        <rect key="frame" x="0.0" y="99.333333333333343" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aJc-Wv-8lt" id="QCe-sV-TE5">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvW-BI-QGB" customClass="PaddedTextField">
+                                                    <rect key="frame" x="119" y="0.0" width="149" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="continue"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="bottomPadding">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="topPadding">
+                                                            <real key="value" value="0.0"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                                            <real key="value" value="25"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                                            <real key="value" value="25"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="textFieldEditingChanged:" destination="aJc-Wv-8lt" eventType="editingChanged" id="486-aI-cmF"/>
+                                                    </connections>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8R-q6-UEo">
+                                                    <rect key="frame" x="15" y="12" width="345" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10000" translatesAutoresizingMaskIntoConstraints="NO" id="Naj-yV-mCT">
+                                                    <rect key="frame" x="276" y="8" width="94" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                                                    <connections>
+                                                        <action selector="stepperValueChanged:" destination="aJc-Wv-8lt" eventType="valueChanged" id="uTD-YP-nEz"/>
+                                                    </connections>
+                                                </stepper>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="stepper" destination="Naj-yV-mCT" id="uCN-rZ-Q9M"/>
+                                            <outlet property="stepperValueField" destination="cvW-BI-QGB" id="59A-aD-7hX"/>
+                                            <outlet property="titleLabel" destination="d8R-q6-UEo" id="N5a-8s-5h6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -246,6 +296,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="UI-Icons_0000s_0117_new-camera" width="20" height="17"/>
+        <image name="icons8-camera-24" width="24" height="24"/>
     </resources>
 </document>
