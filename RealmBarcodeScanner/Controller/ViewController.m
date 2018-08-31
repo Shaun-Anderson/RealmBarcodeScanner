@@ -53,8 +53,9 @@
     [button addTarget:self action:@selector(moveToCreate) forControlEvents:UIControlEventTouchDown];
     [self.view addSubview:button];
     
-    [self setUpBarcodeReader];
-
+    //[self setUpBarcodeReader];
+    
+    [self.view bringSubviewToFront:button];
     [self.view bringSubviewToFront:_highlightView];
     [self.view bringSubviewToFront:_label];
 
@@ -83,19 +84,17 @@
     [_session beginConfiguration];
     [_session setSessionPreset:AVCaptureSessionPreset1920x1080];
     
-    
-    
     [self setupAVCapture];
     [self setupMetaCapture];
     
     _prevLayer = [AVCaptureVideoPreviewLayer layerWithSession:_session];
     _prevLayer.frame = self.view.bounds;
     _prevLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-    
+    [self.view.layer addSublayer:_prevLayer];
+
     [_session commitConfiguration];
     [_session startRunning];
     
-    [self.view.layer addSublayer:_prevLayer];
     
 }
 
