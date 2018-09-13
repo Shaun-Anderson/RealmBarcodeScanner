@@ -1,18 +1,25 @@
 PODS:
+  - Formed (1.0.3)
   - Realm (3.7.6):
     - Realm/Headers (= 3.7.6)
   - Realm/Headers (3.7.6)
 
 DEPENDENCIES:
+  - Formed (from `/Users/shaun/XcodeProjects/Formed`)
   - Realm
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Realm
 
+EXTERNAL SOURCES:
+  Formed:
+    :path: "/Users/shaun/XcodeProjects/Formed"
+
 SPEC CHECKSUMS:
+  Formed: f2bde8ad30f464acfd82206c226b165cb839d7f6
   Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
 
-PODFILE CHECKSUM: 2a76f8841be1966bf7447eefdf72f952a40bb747
+PODFILE CHECKSUM: 46314db7b5318d19b5cfb6cc8ccc400f0684475e
 
 COCOAPODS: 1.5.3

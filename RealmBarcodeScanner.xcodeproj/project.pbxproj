@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2851F67D2131432500F4C448 /* DatabaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2851F67C2131432500F4C448 /* DatabaseObject.m */; };
-		286D8BD82133A46F005D3617 /* InputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 286D8BD72133A46F005D3617 /* InputTableViewCell.m */; };
-		286D8BE32133D696005D3617 /* Form.m in Sources */ = {isa = PBXBuildFile; fileRef = 286D8BE22133D696005D3617 /* Form.m */; };
-		286E60D52138E9B9001DB0D2 /* FormStepperTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 286E60D42138E9B9001DB0D2 /* FormStepperTableViewCell.m */; };
-		28B5FDEF21328ADB00DA00E4 /* UITextField+PaddedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B5FDEE21328ADB00DA00E4 /* UITextField+PaddedTextField.m */; };
 		28B5FDF32132C18300DA00E4 /* CreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B5FDF22132C18300DA00E4 /* CreateViewController.m */; };
 		28B5FDF62132C1C600DA00E4 /* InventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B5FDF52132C1C600DA00E4 /* InventoryViewController.m */; };
 		28FD527B212B827D00C00746 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FD527A212B827D00C00746 /* AppDelegate.m */; };
@@ -20,20 +16,26 @@
 		28FD5283212B827D00C00746 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28FD5282212B827D00C00746 /* Assets.xcassets */; };
 		28FD5286212B827D00C00746 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28FD5284212B827D00C00746 /* LaunchScreen.storyboard */; };
 		28FD5289212B827D00C00746 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FD5288212B827D00C00746 /* main.m */; };
-		6BCB97931299C629F824D3E5 /* libPods-BarcodeScanner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE17E5AFAC539A55D320A6C /* libPods-BarcodeScanner.a */; };
+		5B9541A6A90A884326A5120C /* libPods-RealmBarcodeScanner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D0FE9A734C19A232E62AB99 /* libPods-RealmBarcodeScanner.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		285C7CD12147E8900094AB95 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		122253A4304126ED05E742AB /* Pods-RealmBarcodeScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmBarcodeScanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-RealmBarcodeScanner/Pods-RealmBarcodeScanner.release.xcconfig"; sourceTree = "<group>"; };
 		2851F67C2131432500F4C448 /* DatabaseObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatabaseObject.m; sourceTree = "<group>"; };
 		2851F67E213165BB00F4C448 /* DatabaseObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatabaseObject.h; sourceTree = "<group>"; };
-		286D8BD62133A46F005D3617 /* InputTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputTableViewCell.h; sourceTree = "<group>"; };
-		286D8BD72133A46F005D3617 /* InputTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputTableViewCell.m; sourceTree = "<group>"; };
-		286D8BE12133D5DD005D3617 /* Form.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Form.h; sourceTree = "<group>"; };
-		286D8BE22133D696005D3617 /* Form.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Form.m; sourceTree = "<group>"; };
-		286E60D32138E9B9001DB0D2 /* FormStepperTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FormStepperTableViewCell.h; sourceTree = "<group>"; };
-		286E60D42138E9B9001DB0D2 /* FormStepperTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FormStepperTableViewCell.m; sourceTree = "<group>"; };
-		28B5FDED21328ADB00DA00E4 /* UITextField+PaddedTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+PaddedTextField.h"; sourceTree = "<group>"; };
-		28B5FDEE21328ADB00DA00E4 /* UITextField+PaddedTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+PaddedTextField.m"; sourceTree = "<group>"; };
 		28B5FDF12132C18300DA00E4 /* CreateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateViewController.h; sourceTree = "<group>"; };
 		28B5FDF22132C18300DA00E4 /* CreateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateViewController.m; sourceTree = "<group>"; };
 		28B5FDF42132C1C600DA00E4 /* InventoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InventoryViewController.h; sourceTree = "<group>"; };
@@ -48,9 +50,10 @@
 		28FD5285212B827D00C00746 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28FD5287212B827D00C00746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28FD5288212B827D00C00746 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2D0FE9A734C19A232E62AB99 /* libPods-RealmBarcodeScanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RealmBarcodeScanner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3779D355D4C8B989A27F057F /* Pods-BarcodeScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcodeScanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarcodeScanner/Pods-BarcodeScanner.release.xcconfig"; sourceTree = SOURCE_ROOT; };
+		5C35A8C270FD418F77835F48 /* Pods-RealmBarcodeScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmBarcodeScanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmBarcodeScanner/Pods-RealmBarcodeScanner.debug.xcconfig"; sourceTree = "<group>"; };
 		8DD0624D949BAEB575D49E95 /* Pods-BarcodeScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcodeScanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BarcodeScanner/Pods-BarcodeScanner.debug.xcconfig"; sourceTree = SOURCE_ROOT; };
-		EAE17E5AFAC539A55D320A6C /* libPods-BarcodeScanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BarcodeScanner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BCB97931299C629F824D3E5 /* libPods-BarcodeScanner.a in Frameworks */,
+				5B9541A6A90A884326A5120C /* libPods-RealmBarcodeScanner.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,8 +71,6 @@
 		2851F682213174B300F4C448 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				286D8BE12133D5DD005D3617 /* Form.h */,
-				286D8BE22133D696005D3617 /* Form.m */,
 				2851F67E213165BB00F4C448 /* DatabaseObject.h */,
 				2851F67C2131432500F4C448 /* DatabaseObject.m */,
 			);
@@ -94,12 +95,6 @@
 			children = (
 				28FD527F212B827D00C00746 /* Main.storyboard */,
 				28FD5284212B827D00C00746 /* LaunchScreen.storyboard */,
-				28B5FDED21328ADB00DA00E4 /* UITextField+PaddedTextField.h */,
-				28B5FDEE21328ADB00DA00E4 /* UITextField+PaddedTextField.m */,
-				286D8BD62133A46F005D3617 /* InputTableViewCell.h */,
-				286D8BD72133A46F005D3617 /* InputTableViewCell.m */,
-				286E60D32138E9B9001DB0D2 /* FormStepperTableViewCell.h */,
-				286E60D42138E9B9001DB0D2 /* FormStepperTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -142,6 +137,8 @@
 			children = (
 				8DD0624D949BAEB575D49E95 /* Pods-BarcodeScanner.debug.xcconfig */,
 				3779D355D4C8B989A27F057F /* Pods-BarcodeScanner.release.xcconfig */,
+				5C35A8C270FD418F77835F48 /* Pods-RealmBarcodeScanner.debug.xcconfig */,
+				122253A4304126ED05E742AB /* Pods-RealmBarcodeScanner.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -149,7 +146,7 @@
 		FD9A52B09FD755DDCAA50BED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EAE17E5AFAC539A55D320A6C /* libPods-BarcodeScanner.a */,
+				2D0FE9A734C19A232E62AB99 /* libPods-RealmBarcodeScanner.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -165,6 +162,7 @@
 				28FD5272212B827D00C00746 /* Sources */,
 				28FD5273212B827D00C00746 /* Frameworks */,
 				28FD5274212B827D00C00746 /* Resources */,
+				285C7CD12147E8900094AB95 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,7 +231,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BarcodeScanner-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-RealmBarcodeScanner-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -247,11 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28B5FDEF21328ADB00DA00E4 /* UITextField+PaddedTextField.m in Sources */,
 				28FD527E212B827D00C00746 /* ViewController.m in Sources */,
-				286D8BD82133A46F005D3617 /* InputTableViewCell.m in Sources */,
-				286E60D52138E9B9001DB0D2 /* FormStepperTableViewCell.m in Sources */,
-				286D8BE32133D696005D3617 /* Form.m in Sources */,
 				28B5FDF32132C18300DA00E4 /* CreateViewController.m in Sources */,
 				28FD5289212B827D00C00746 /* main.m in Sources */,
 				28FD527B212B827D00C00746 /* AppDelegate.m in Sources */,
@@ -392,11 +386,15 @@
 		};
 		28FD528D212B827D00C00746 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DD0624D949BAEB575D49E95 /* Pods-BarcodeScanner.debug.xcconfig */;
+			baseConfigurationReference = 5C35A8C270FD418F77835F48 /* Pods-RealmBarcodeScanner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X9T272DK2T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = RealmBarcodeScanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ando.BarcodeScanner;
@@ -407,11 +405,15 @@
 		};
 		28FD528E212B827D00C00746 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3779D355D4C8B989A27F057F /* Pods-BarcodeScanner.release.xcconfig */;
+			baseConfigurationReference = 122253A4304126ED05E742AB /* Pods-RealmBarcodeScanner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X9T272DK2T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = RealmBarcodeScanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ando.BarcodeScanner;

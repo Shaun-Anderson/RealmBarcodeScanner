@@ -1,0 +1,19 @@
+{
+  "name": "Formed",
+  "version": "1.0.3",
+  "summary": "Sort description of 'Formed' framework",
+  "homepage": "http://www.yudiz.com",
+  "license": "MIT",
+  "authors": "Shaun Anderson",
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source": {
+    "git": "https://github.com/Shaun-Anderson/Formed.git",
+    "tag": "1.0.3"
+  },
+  "source_files": [
+    "Formed",
+    "Formed/**/*.{h,m}"
+  ]
+}

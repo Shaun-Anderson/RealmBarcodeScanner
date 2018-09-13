@@ -10,7 +10,7 @@
 #import "InputTableViewCell.h"
 #import "FormStepperTableViewCell.h"
 #import "DatabaseObject.h"
-#import "Form.h"
+#import <Formed/Formed.h>
 
 @interface CreateViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
