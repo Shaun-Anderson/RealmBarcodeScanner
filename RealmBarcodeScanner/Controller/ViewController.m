@@ -151,7 +151,7 @@
     UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel
                                                          handler:^(UIAlertAction * action) {
                                                              self->_highlightView.frame = CGRectZero;
-                                                             [_session startRunning];
+                                                             [self->_session startRunning];
                                                          }];
     
     [foundAlert addAction:addAction];

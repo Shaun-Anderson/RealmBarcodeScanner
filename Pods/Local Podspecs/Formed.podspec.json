@@ -1,7 +1,7 @@
 {
   "name": "Formed",
-  "version": "1.0.3",
-  "summary": "Sort description of 'Formed' framework",
+  "version": "0.0.1",
+  "summary": "A simple form pod to help with the quick creation of basic form interfaces.",
   "homepage": "http://www.yudiz.com",
   "license": "MIT",
   "authors": "Shaun Anderson",
@@ -10,10 +10,15 @@
   },
   "source": {
     "git": "https://github.com/Shaun-Anderson/Formed.git",
-    "tag": "1.0.3"
+    "tag": "0.0.1"
   },
   "source_files": [
     "Formed",
     "Formed/**/*.{h,m}"
-  ]
+  ],
+  "resource_bundles": {
+    "Formed": [
+      "Formed/**/*.xib"
+    ]
+  }
 }

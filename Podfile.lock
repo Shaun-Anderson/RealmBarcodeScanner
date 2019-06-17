@@ -1,8 +1,8 @@
 PODS:
-  - Formed (1.0.3)
-  - Realm (3.7.6):
-    - Realm/Headers (= 3.7.6)
-  - Realm/Headers (3.7.6)
+  - Formed (0.0.1)
+  - Realm (3.10.0):
+    - Realm/Headers (= 3.10.0)
+  - Realm/Headers (3.10.0)
 
 DEPENDENCIES:
   - Formed (from `/Users/shaun/XcodeProjects/Formed`)
@@ -17,8 +17,8 @@ EXTERNAL SOURCES:
     :path: "/Users/shaun/XcodeProjects/Formed"
 
 SPEC CHECKSUMS:
-  Formed: f2bde8ad30f464acfd82206c226b165cb839d7f6
-  Realm: 9eaecad54712d6246d08ba34c10f354e4715d7d3
+  Formed: eb171625de0a81d423d60eda6209a87c6c5817a1
+  Realm: 85ab9e4f779d66f6e9ffeb118dc25b7f130c96ac
 
 PODFILE CHECKSUM: 46314db7b5318d19b5cfb6cc8ccc400f0684475e
 

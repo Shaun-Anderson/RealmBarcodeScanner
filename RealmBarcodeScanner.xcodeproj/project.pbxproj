@@ -51,9 +51,7 @@
 		28FD5287212B827D00C00746 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28FD5288212B827D00C00746 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2D0FE9A734C19A232E62AB99 /* libPods-RealmBarcodeScanner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RealmBarcodeScanner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3779D355D4C8B989A27F057F /* Pods-BarcodeScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcodeScanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarcodeScanner/Pods-BarcodeScanner.release.xcconfig"; sourceTree = SOURCE_ROOT; };
 		5C35A8C270FD418F77835F48 /* Pods-RealmBarcodeScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmBarcodeScanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RealmBarcodeScanner/Pods-RealmBarcodeScanner.debug.xcconfig"; sourceTree = "<group>"; };
-		8DD0624D949BAEB575D49E95 /* Pods-BarcodeScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarcodeScanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BarcodeScanner/Pods-BarcodeScanner.debug.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,8 +133,6 @@
 		C7DC5AFDD6F9FCEE2D46583A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8DD0624D949BAEB575D49E95 /* Pods-BarcodeScanner.debug.xcconfig */,
-				3779D355D4C8B989A27F057F /* Pods-BarcodeScanner.release.xcconfig */,
 				5C35A8C270FD418F77835F48 /* Pods-RealmBarcodeScanner.debug.xcconfig */,
 				122253A4304126ED05E742AB /* Pods-RealmBarcodeScanner.release.xcconfig */,
 			);
@@ -163,6 +159,7 @@
 				28FD5273212B827D00C00746 /* Frameworks */,
 				28FD5274212B827D00C00746 /* Resources */,
 				285C7CD12147E8900094AB95 /* Embed Frameworks */,
+				9D39B9FC1271AF24B5FD5C24 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,6 +233,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D39B9FC1271AF24B5FD5C24 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RealmBarcodeScanner/Pods-RealmBarcodeScanner-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Formed/Formed.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Formed.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RealmBarcodeScanner/Pods-RealmBarcodeScanner-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

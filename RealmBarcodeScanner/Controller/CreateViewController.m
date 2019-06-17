@@ -7,42 +7,56 @@
 //
 
 #import "CreateViewController.h"
-#import "InputTableViewCell.h"
-#import "FormStepperTableViewCell.h"
 #import "DatabaseObject.h"
 #import <Formed/Formed.h>
-
-@interface CreateViewController ()
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-
-@end
 
 @implementation CreateViewController
 
 DatabaseObject *newObject;
-Form* form;
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    // Do any additional setup after loading the view.
-    _tableView.delegate = self;
-    _tableView.dataSource = self;
+
+    self.form = [[Form alloc] init];
     
-    form = [[Form alloc] init];
-    [form addSection:@"Input"];
-    [form addTextField:@"Name"];
-    [form addTextField:@"Description"];
-    [form addSection:@"Next"];
-    [form addStepper:@"Amount"];
+    FormSegmentedControl *typeSelector = [self.form addSegmentedControl];
+    [typeSelector addSegment:@"|"];
+    [typeSelector addTextField:@"TextExample"];
+    [typeSelector addSegment:@"||"];
+    [typeSelector addTextField:@"OtherTextExample"];
+    [typeSelector addTextField:@"OtherTextExample"];
+
+    [self.form addHeader:@"Other elements"];
+    [self.form addStepper:@"Stepper Example"];
+    [self.form addSwitch:@"Switch Example"];
+
+    [self.form addSwitch:@"Switch Example"];
+    [self.form addSwitch:@"Switch Example"];
+    [self.form addSwitch:@"Switch Example"];
+    [self.form addSwitch:@"Switch Example"];
+    [self.form addSwitch:@"Switch Example"];
+    [self.form addTextField:@"Bottom"];
+    [self.form addSwitch:@"Switch Example"];
     
+    [self.form addSwitch:@"Switch Example"];
+    [self.form addSwitch:@"Switch Example"];
+    [self.form addTextField:@"Bottom"];
+    
+    FormSegmentedControl *otherType = [self.form addSegmentedControl];
+    [otherType addSegment:@"1"];
+    [otherType addTextField:@"TextExample"];
+    [otherType addTextField:@"TextExample"];
+    [otherType addSegment:@"2"];
+    [otherType addTextField:@"hiiiii"];
+    [otherType addTextField:@"TextExample"];
+
+    [self refresh];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)saveButtonPressed:(id)sender {
     
 }
@@ -63,57 +77,5 @@ Form* form;
     
 }
 
-// MARK: - TableView Delegate/DataSource
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *simpleTableIdentifier = @"inputCell";
-    NSString *stepperCellIdentifier = @"formStepperCell";
-    
-    switch (form.sections[indexPath.section].inputs[indexPath.row].typeFlag) {
-        case Text:
-        {
-            InputTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-            
-            if (cell == nil) {
-                cell = [[InputTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-            }
-            
-            cell.titleLabel.text = form.sections[indexPath.section].inputs[indexPath.row].inputName;
-            return cell;
-        }
-            
-        case Stepper:
-        {
-            FormStepperTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:stepperCellIdentifier];
-            
-            if (cell == nil) {
-                cell = [[FormStepperTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:stepperCellIdentifier];
-            }
-            
-            cell.titleLabel.text = form.sections[indexPath.section].inputs[indexPath.row].inputName;
-            return cell;
-        }
-            
-        default:
-        {
-            UITableViewCell *cell = [[UITableViewCell alloc] init];
-            return cell;
-        }
-    }
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    return form.sections[section].inputs.count;
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return form.sections.count;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return form.sections[section].sectionName;
-}
 
 @end

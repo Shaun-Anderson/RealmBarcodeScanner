@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FormedTableViewController.h>
 
-@interface CreateViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface CreateViewController : FormedTableViewController
+@property (weak, nonatomic) IBOutlet UITableView *_tableView;
 
 @end
